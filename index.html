@@ -1,1 +1,107 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scramble React!</title>
+  <script src="build/react.js"></script>
+</head>
+
+<style scoped>
+
+.greenButton {
+  background-color:#74ad5a;
+  border:1px solid #3b6e22;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:18px;
+  padding:6px 12px;
+  text-decoration:none;
+}
+
+.wordButton {
+  font-family:arial;
+  font-size:14px;
+}
+
+.style-1 {
+  padding: 2px;
+  border: solid 1px #dcdcdc;
+  font-family:arial;
+  font-size:24px;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+</style>
+
+
+<body>
+
+  <!-- Part 1: Wrap all page content here -->
+  <div id="wrap">
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Scramble Solver</h1>
+      </div>
+      <p class="lead">Enter 4x4 matrix of letters from Scramble game and receive possible words</p>
+
+      <label id="message"></label></P>
+      <input type="text" class="style-1" id="letters" placeholder="Enter letters here">
+      <button type="button" class="greenButton" onClick="GAME.restartGame()">Find Words</Button></P>
+      <input type="checkbox" id="findall">Find all words? </input>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4" id="gameBoardCanvasDiv">
+            <!--Sidebar content-->
+          </div>
+          <div class="span6">
+            <!--Body content-->
+            <div class="btn-group btn-group-horizontal">
+              <div id="solutionbuttons" class="btn-group btn-group-vertical">
+              </div>
+              <textarea class=".lead" width="100%" height="100%" id="results" placeholder="Results go here" ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <p/>
+
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js">
+      </script>
+
+ 
+
+    </div>
+  </div>
+ 
+  <div id="wordButtons"></div><p/>
+  <div id="wordList"></div>
+  
+  <div id="example"></div>
+
+</div>
+
+<div id="footer">
+ <div class="container">
+  <p class="muted credit">Scramble Solver - Brett Harper 2015</p>
+</div>
+</div>
+
+<script src="resources/englishDict.js"></script>
+<script src="build/ReactScramble.js"></script>
+<script src="build/scramble.js"></script>
+
+</body>
+</html>
